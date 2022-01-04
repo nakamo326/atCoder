@@ -14,8 +14,8 @@ long long getGCD(long long a, long long b) {
 }
 
 long long getGcdFromVec(vector<long long> vec) {
-  ll ret = getGCD(vec.at(0), vec.at(1));
-  for (size_t i = 2; i < vec.size(); i++) {
+  ll ret = vec.at(0);
+  for (size_t i = 1; i < vec.size(); i++) {
     ret = getGCD(ret, vec.at(i));
   }
   return ret;
