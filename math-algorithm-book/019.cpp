@@ -3,14 +3,14 @@
 using namespace std;
 typedef long long ll;
 
-long long getFractorial(long long n) {
+long long getFactorial(long long n) {
   long long ret = 1;
   while (n > 1) ret *= n--;
   return ret;
 }
 
 long long combinate(long long num, long long choose) {
-  return num * (num - 1) / getFractorial(choose);
+  return num * (num - 1) / getFactorial(choose);
 }
 
 int main() {
