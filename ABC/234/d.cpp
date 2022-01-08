@@ -3,14 +3,6 @@
 using namespace std;
 typedef long long ll;
 
-template <typename T>
-void outputVector(vector<T> vec) {
-  for (size_t i = 0; i < vec.size() - 1; i++) {
-    std::cout << vec.at(i) << " ";
-  }
-  std::cout << vec.back() << std::endl;
-}
-
 int main() {
   ll n, k;
   cin >> n >> k;
@@ -34,7 +26,6 @@ int main() {
       tmp.push_back(p[i]);
     } else {
       tmp.push_back(p[i]);
-      if (i == 9) outputVector(tmp);
       sort(tmp.begin(), tmp.end(), std::greater<int>());
       ret = tmp.at(k - 1);
       std::cout << ret << std::endl;
